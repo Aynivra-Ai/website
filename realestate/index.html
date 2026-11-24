@@ -919,7 +919,7 @@ window.AynivraStartWebCall = window.AynivraStartWebCall || null;
   function buildPayload() {
     var cfg = configurations();
     var company = val("dm-company");
-    return {
+    res = {
       event: "demo_setup",
       submission_id: submissionId,
       page: PAGE_ID,
@@ -945,6 +945,8 @@ window.AynivraStartWebCall = window.AynivraStartWebCall || null;
       page_url: location.href,
       submitted_at: new Date().toISOString()
     };
+    console.log(res);
+    return res
   }
 
   function post(payload) {
