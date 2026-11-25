@@ -527,15 +527,17 @@ input,select{font:inherit}
               <p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5B6478">So we know who to set the demo up for.</p>
             </div>
           </div>
-          <div style="display: flex; gap: 12px">
-            <div style="flex: 0 0 92px; display: flex; flex-direction: column; gap: 6px">
-              <label for="dm-sal" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Title</label>
-              <select id="dm-sal" name="salutation" style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 10px; font-size: 16px; color: #0F1A3A; background: #FFFFFF"><option>Mr</option><option>Ms</option><option>Mrs</option><option>Dr</option></select>
-            </div>
-            <div style="flex: 1 1 auto; min-width: 0"><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
-              <label for="dm-name" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Full name</label>
-              <input id="dm-name" name="name" type="text" placeholder="e.g. Govind Jaidhara" autocomplete="name" required style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
-            </div></div>
+          <div style="width: 92px; display: flex; flex-direction: column; gap: 6px">
+            <label for="dm-sal" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Title</label>
+            <select id="dm-sal" name="salutation" style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 10px; font-size: 16px; color: #0F1A3A; background: #FFFFFF"><option>Mr</option><option>Ms</option><option>Mrs</option><option>Dr</option></select>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+            <label for="dm-first" style="font-size: 14px; font-weight: 600; color: #0F1A3A">First name</label>
+            <input id="dm-first" name="first_name" type="text" placeholder="e.g. Govind" autocomplete="given-name" required style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+            <label for="dm-last" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Last name</label>
+            <input id="dm-last" name="last_name" type="text" placeholder="e.g. Jaidhara" autocomplete="family-name" required style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
           </div>
           <div style="display: flex; flex-direction: column; gap: 6px">
             <label for="dm-mobile" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Mobile number</label>
@@ -545,12 +547,12 @@ input,select{font:inherit}
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
-              <label for="dm-email" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Email <span style="font-weight: 500; color: #5B6478">(optional)</span></label>
-              <input id="dm-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
+              <label for="dm-company" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Company</label>
+              <input id="dm-company" name="company" type="text" placeholder="e.g. Reliable Builders" autocomplete="organization" required style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
             </div>
           <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
-              <label for="dm-company" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Company <span style="font-weight: 500; color: #5B6478">(optional)</span></label>
-              <input id="dm-company" name="company" type="text" placeholder="e.g. Reliable Builders" autocomplete="organization" style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
+              <label for="dm-email" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Email <span style="font-weight: 500; color: #5B6478">(optional)</span></label>
+              <input id="dm-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
             </div>
           <div style="display: flex; flex-direction: column; gap: 6px">
             <label for="dm-role" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Your role</label>
@@ -574,6 +576,14 @@ input,select{font:inherit}
               <label for="dm-dev" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Developer group</label>
               <input id="dm-dev" name="dev" type="text" placeholder="Same as your company"  style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
             </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+            <label for="dm-address" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Address</label>
+            <textarea id="dm-address" name="address" rows="3" placeholder="e.g. Plot 12, Sector 35, Kharghar, Navi Mumbai" autocomplete="off" required style="border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 12px 14px; font-size: 15px; line-height: 1.5; color: #0F1A3A; resize: vertical; font-family: inherit"></textarea>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="dm-locality" style="font-size: 14px; font-weight: 600; color: #0F1A3A">What's close by</label>
+            <textarea id="dm-locality" name="locality" rows="3" placeholder="e.g. 5 min to Kharghar metro, DPS school 1 km, Apollo Hospital 2 km" style="border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 12px 14px; font-size: 15px; line-height: 1.5; color: #0F1A3A; resize: vertical; font-family: inherit"></textarea>
           </div>
           <div style="display: flex; flex-direction: column; gap: 8px">
             <p style="margin: 0; font-size: 14px; font-weight: 600; color: #0F1A3A">Configurations</p>
@@ -616,6 +626,17 @@ input,select{font:inherit}
               <input id="dm-price" name="starting_price" type="text" placeholder="e.g. 78 lakh onwards" style="flex: 1 1 auto; min-width: 0; border: 0; padding: 0 14px; font-size: 16px; color: #0F1A3A">
             </div>
           </div>
+          <fieldset style="margin: 0; padding: 0; border: 0; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <legend style="padding: 0; margin-bottom: 6px; font-size: 14px; font-weight: 600; color: #0F1A3A">Possession date <span style="font-weight: 500; color: #5B6478">(optional)</span></legend>
+            <div style="display: flex; gap: 12px">
+              <select id="dm-poss-month" name="possession_month" aria-label="Possession month" style="flex: 1 1 0; min-width: 0; height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 10px; font-size: 16px; color: #0F1A3A; background: #FFFFFF"><option value="">Month</option><option value="Jan">January</option><option value="Feb">February</option><option value="Mar">March</option><option value="Apr">April</option><option value="May">May</option><option value="Jun">June</option><option value="Jul">July</option><option value="Aug">August</option><option value="Sep">September</option><option value="Oct">October</option><option value="Nov">November</option><option value="Dec">December</option></select>
+              <select id="dm-poss-year" name="possession_year" aria-label="Possession year" style="flex: 1 1 0; min-width: 0; height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 10px; font-size: 16px; color: #0F1A3A; background: #FFFFFF"><option value="">Year</option></select>
+            </div>
+          </fieldset>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="dm-towers" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Number of towers <span style="font-weight: 500; color: #5B6478">(optional)</span></label>
+            <input id="dm-towers" name="towers" type="text" inputmode="numeric" maxlength="3" placeholder="e.g. 4" style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
+          </div>
           <div style="display: flex; flex-direction: column; gap: 8px">
             <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
               <p style="margin: 0; font-size: 14px; font-weight: 600; color: #0F1A3A">Top amenities</p>
@@ -623,12 +644,8 @@ input,select{font:inherit}
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 8px"><button type="button" class="dm-chip" data-group="amenity" data-value="Swimming pool" aria-pressed="false">Swimming pool</button><button type="button" class="dm-chip" data-group="amenity" data-value="Gym" aria-pressed="false">Gym</button><button type="button" class="dm-chip" data-group="amenity" data-value="Clubhouse" aria-pressed="false">Clubhouse</button><button type="button" class="dm-chip" data-group="amenity" data-value="Kids' play area" aria-pressed="false">Kids' play area</button><button type="button" class="dm-chip" data-group="amenity" data-value="Landscaped garden" aria-pressed="false">Landscaped garden</button><button type="button" class="dm-chip" data-group="amenity" data-value="Covered parking" aria-pressed="false">Covered parking</button><button type="button" class="dm-chip" data-group="amenity" data-value="Jogging track" aria-pressed="false">Jogging track</button><button type="button" class="dm-chip" data-group="amenity" data-value="24x7 security" aria-pressed="false">24x7 security</button><button type="button" class="dm-chip" data-group="amenity" data-value="Power backup" aria-pressed="false">Power backup</button></div>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 6px">
-            <label for="dm-locality" style="font-size: 14px; font-weight: 600; color: #0F1A3A">What's close by</label>
-            <textarea id="dm-locality" name="locality" rows="3" placeholder="e.g. 5 min to Kharghar metro, DPS school 1 km, Apollo Hospital 2 km" style="border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 12px 14px; font-size: 15px; line-height: 1.5; color: #0F1A3A; resize: vertical; font-family: inherit"></textarea>
-          </div>
           <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
-              <label for="dm-website" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Project website <span style="font-weight: 500; color: #5B6478">(optional)</span></label>
+              <label for="dm-website" style="font-size: 14px; font-weight: 600; color: #0F1A3A">Project or Company website <span style="font-weight: 500; color: #5B6478">(optional)</span></label>
               <input id="dm-website" name="website" type="url" placeholder="https://"  style="height: 48px; border: 1.5px solid #D5D2EA; border-radius: 12px; padding: 0 14px; font-size: 16px; color: #0F1A3A; background: #FFFFFF; box-sizing: border-box; width: 100%">
             </div>
         </div>
@@ -906,6 +923,25 @@ window.AynivraStartWebCall = window.AynivraStartWebCall || null;
     });
   });
 
+  // Possession year: two years back (ready-to-move) to ten years ahead
+  (function () {
+    var sel = $("dm-poss-year"), now = new Date().getFullYear();
+    for (var y = now - 2; y <= now + 10; y++) {
+      var o = document.createElement("option"); o.value = o.textContent = String(y); sel.appendChild(o);
+    }
+  })();
+
+  // Multi-line text -> one spreadsheet cell: line breaks become ", ", extra spaces collapse
+  function oneLine(s) {
+    return s.split(/\s*\n\s*/).map(function (l) { return l.replace(/[,\s]+$/, ""); })
+      .filter(Boolean).join(", ").replace(/[ \t]+/g, " ");
+  }
+
+  function possessionDate() {
+    var m = val("dm-poss-month"), y = val("dm-poss-year");
+    return m && y ? m + " " + y : "";
+  }
+
   function configurations() {
     return pressed("config").map(function (c) {
       var el = $("dm-carpet-" + c.charAt(0));
@@ -924,19 +960,24 @@ window.AynivraStartWebCall = window.AynivraStartWebCall || null;
       submission_id: submissionId,
       page: PAGE_ID,
       salutation: val("dm-sal"),
-      name: val("dm-name"),
+      first_name: val("dm-first"),
+      last_name: val("dm-last"),
+      name: (val("dm-first") + " " + val("dm-last")).trim(),
       mobile: "+91" + val("dm-mobile").replace(/\D/g, "").replace(/^91(?=\d{10}$)/, "").replace(/^0/, ""),
       email: val("dm-email"),
       company: company,
       role: val("dm-role"),
       project_name: val("dm-project"),
       developer_group: val("dm-dev") || company,
+      address: oneLine(val("dm-address")),
       configurations: cfg.map(function (c) { return c.carpet_sqft ? c.type + " (" + c.carpet_sqft + " sq ft carpet)" : c.type; }).join(", "),
       configurations_list: cfg,
       starting_price: val("dm-price"),
+      possession_date: possessionDate(),
+      towers: val("dm-towers") ? parseInt(val("dm-towers"), 10) : "",
       amenities: pressed("amenity").join(", "),
       amenities_list: pressed("amenity"),
-      locality: val("dm-locality"),
+      locality: oneLine(val("dm-locality")),
       website: val("dm-website"),
       language: AGENT_LANGUAGE,
       consent: true,
@@ -973,18 +1014,31 @@ window.AynivraStartWebCall = window.AynivraStartWebCall || null;
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     showError("");
-    var name = val("dm-name");
+    var firstName = val("dm-first");
+    var lastName = val("dm-last");
+    var company = val("dm-company");
     var mobile = val("dm-mobile").replace(/\D/g, "").replace(/^91(?=\d{10}$)/, "").replace(/^0/, "");
     var email = val("dm-email");
     var project = val("dm-project");
     var consent = $("dm-consent").checked;
     var errors = [];
-    mark($("dm-name"), !name); if (!name) errors.push("your name");
+    mark($("dm-first"), !firstName); if (!firstName) errors.push("your first name");
+    mark($("dm-last"), !lastName); if (!lastName) errors.push("your last name");
     var mobileOk = /^[6-9]\d{9}$/.test(mobile);
     mark($("dm-mobile-box"), !mobileOk); if (!mobileOk) errors.push("a valid 10-digit mobile number");
     var emailOk = !email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     mark($("dm-email"), !emailOk); if (!emailOk) errors.push("a valid email (or leave it blank)");
+    mark($("dm-company"), !company); if (!company) errors.push("your company");
     mark($("dm-project"), !project); if (!project) errors.push("your project's name");
+    var address = val("dm-address");
+    mark($("dm-address"), !address); if (!address) errors.push("the project's address");
+    var possM = val("dm-poss-month"), possY = val("dm-poss-year");
+    var possOk = !possM === !possY;
+    mark($("dm-poss-month"), !possOk && !possM); mark($("dm-poss-year"), !possOk && !possY);
+    if (!possOk) errors.push("both month and year for possession (or leave both blank)");
+    var towers = val("dm-towers");
+    var towersOk = !towers || (/^\d+$/.test(towers) && parseInt(towers, 10) > 0);
+    mark($("dm-towers"), !towersOk); if (!towersOk) errors.push("a whole number of towers (or leave it blank)");
     if (!consent) errors.push("your consent to receive the demo calls");
     if (errors.length) { showError("Please add " + errors.join(", ") + "."); return; }
 
