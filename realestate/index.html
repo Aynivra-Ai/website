@@ -100,6 +100,7 @@ input,select{font:inherit}
 .dm-post{grid-template-columns:minmax(0,0.55fr) minmax(0,1.6fr);align-items:start}
 .dm-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .dm-uses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.dm-uses>div>div:first-child{min-height:34px}.dm-uses>div>div:first-child p{line-height:1.4}
 .dm-carpets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:4px}
 .ba-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .fp-row{display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);gap:16px;align-items:center}
@@ -661,10 +662,10 @@ input,select{font:inherit}
           </div>
           <div style="display: flex; flex-direction: column; gap: 10px">
             <div style="display: flex; gap: 12px; align-items: center; padding: 14px; border: 1.5px dashed #D5D2EA; border-radius: 16px">
-              <div aria-hidden="true" style="width: 40px; height: 40px; flex: 0 0 40px; border-radius: 12px; background: #C5BFF7; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0M12 17v5"></path></svg></div>
+              <div aria-hidden="true" style="width: 40px; height: 40px; flex: 0 0 40px; border-radius: 12px; background: #C5BFF7; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></div>
               <div style="flex: 1 1 auto; min-width: 0">
                 <p style="margin: 0; font-size: 15px; font-weight: 700; color: #0F1A3A">Enquire now</p>
-                <p style="margin: 2px 0 0; font-size: 13px; line-height: 1.4; color: #5B6478">Talk to it in your browser</p>
+                <p style="margin: 2px 0 0; font-size: 13px; line-height: 1.4; color: #5B6478">Call our enquiry number</p>
               </div>
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B6478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
             </div>
@@ -725,12 +726,10 @@ input,select{font:inherit}
             <div style="background: #FFFFFF; border: 1px solid #E4E1F7; border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0">
               <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
                 <p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #5B3FE0">STAGE 1 · ENQUIRY</p>
-                <p style="margin: 0; font-size: 12px; font-weight: 600; color: #5B6478">In your browser</p>
+                <p style="margin: 0; font-size: 12px; font-weight: 600; color: #5B6478">You call<br>in</p>
               </div>
               <p style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 24px; line-height: 1.15; color: #0F1A3A">Enquire now</p>
-              <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4560">Talk to the assistant right here, as a buyer asking about <span class="js-proj">your project</span>. Needs your microphone.</p>
-              <button type="button" class="dm-uc-btn" data-use-case="web_enquiry">Start web call</button>
-              <p class="dm-uc-status" data-status-for="web_enquiry" aria-live="polite" style="margin: 0; min-height: 20px; font-size: 14px; font-weight: 600; color: #17808A"></p>
+              <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4560">Initiate an enquiry by calling <a href="tel:+912269986504" style="font-weight: 700; color: #5B3FE0; white-space: nowrap">+912269986504</a></p>
             </div>
             <div style="background: #FFFFFF; border: 1px solid #E4E1F7; border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0">
               <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
@@ -885,16 +884,10 @@ input,select{font:inherit}
 /* =====================================================================
    SETTINGS — the Aynivra builder fills these in
    ===================================================================== */
-var WEBHOOK_URL = "https://REPLACE-WITH-N8N-WEBHOOK-URL"; // n8n webhook (POST, JSON)
+var WEBHOOK_URL = "https://qwerty051.app.n8n.cloud/webhook/aynivra-demo"; // n8n webhook (POST, JSON)
 var PAGE_ID = "realestate";
 var AGENT_LANGUAGE = "Hindi";                             // only Hindi at launch
 var WHATSAPP_URL = "https://wa.me/918828740809";
-
-/* Browser call ("Enquire now"). Wire the voice platform's web SDK here.
-   Return a Promise that resolves once the call has connected.
-   `vars` holds everything the agent needs (project, configurations, price…).
-   Until this is wired, the button tells the visitor to use "Call me now". */
-window.AynivraStartWebCall = window.AynivraStartWebCall || null;
 /* ===================================================================== */
 
 (function () {
@@ -1143,7 +1136,6 @@ window.AynivraStartWebCall = window.AynivraStartWebCall || null;
   });
 
   var DONE = {
-    web_enquiry: function () { return "Connected. Say hello, you're the buyer."; },
     followup_call: function (p) { return "Calling " + nice(p.mobile) + " in about 60 seconds."; },
     emi_reminder: function (p) { return "Reminder call on its way to " + nice(p.mobile) + "."; }
   };
@@ -1157,20 +1149,6 @@ window.AynivraStartWebCall = window.AynivraStartWebCall || null;
         event: "demo_trigger", use_case: useCase, triggered_at: new Date().toISOString()
       });
       btn.disabled = true; status.textContent = "Connecting…";
-
-      if (useCase === "web_enquiry") {
-        if (typeof window.AynivraStartWebCall !== "function") {
-          status.textContent = "Browser calls aren't switched on yet. Try Call me now.";
-          btn.disabled = false; return;
-        }
-        post(payload).catch(function () {}); // log the attempt in the CRM; don't block the call
-        Promise.resolve(window.AynivraStartWebCall(payload)).then(function () {
-          status.textContent = DONE.web_enquiry(payload); btn.classList.add("done"); btn.disabled = false;
-        }).catch(function () {
-          status.textContent = "Couldn't start the call. Please allow your microphone and try again."; btn.disabled = false;
-        });
-        return;
-      }
       post(payload).then(function () {
         status.textContent = DONE[useCase](payload); btn.classList.add("done");
       }).catch(function () {
